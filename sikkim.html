@@ -1,0 +1,15 @@
+import pandas as pd
+from IPython.display import HTML
+
+data = {
+    'Name': ['shubhrajyoti', 'rana', 'kushal', 'Arnab', 'Koushik', 'Anupam', 'Avijit'],
+    '1st installment': [5000, 5000, 5000, 5000, 5000, 5000, 5000],
+    '1st_status': ['Paid', 'paid', 'paid', 'Due', 'paid', 'paid', 'paid'],
+    '2nd installment': ['', 6000, '', '', 6000, 6000, ''],
+    '2nd_status': ['Due', 'paid', 'Due', 'Due', 'paid', 'paid', 'Due']
+}
+
+df = pd.DataFrame(data)
+
+# Display the DataFrame as an HTML table
+HTML(df.to_html(index=False))
